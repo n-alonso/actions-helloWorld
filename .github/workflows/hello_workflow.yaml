@@ -9,3 +9,14 @@ jobs:
         run: echo "$(<hello.txt)"
       - name: Hello world using cat
         run: cat hello.txt
+  show-secret-phrase:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: abystoma/test
+          ref: CombinedPhrase
+      - name: Create file "hello.txt" with the word Hello
+        run: ???
+      - name: Show me the answer
+        run: cat hello.txt from.txt
